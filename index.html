@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Parcel Sandbox</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./src/axist.css" type="text/css" />
+  </head>
+
+  <body>
+    <div id="app" style="margin-bottom: 10px;">
+      <h1>
+        <a
+          href="https://github.com/excalidraw/svg-to-excalidraw"
+          target="_blank"
+          >SVG to Excalidraw</a
+        >
+        DEMO
+      </h1>
+      <h2>Steps</h2>
+      <ol>
+        <li>Paste the raw string of your SVG in the textarea below.</li>
+        <li>
+          Click the "Convert" button. This will generate raw JSON below the
+          button
+        </li>
+        <li>Select and copy ALL the generated JSON</li>
+        <li>
+          Navigate to your excalidraw session. Paste (cmd/ctrl + v) into your
+          session. You should see something that resembles your svg.
+        </li>
+        <li>Rinse and Repeat as needed :)</li>
+      </ol>
+      <div style="display: flex; flex-direction: column; margin-bottom: 20px;">
+        <label for="svg-str-textarea">SVG String:</label>
+        <textarea id="svg-str-textarea" rows="6" cols="80"></textarea>
+        <div>
+          <button id="convert-btn">Convert</button>
+        </div>
+      </div>
+
+      <label>Excalidraw Output:</label>
+      <pre id="content"></pre>
+    </div>
+
+    <script src="src/index.ts"></script>
+  </body>
+</html>
